@@ -10,6 +10,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
 	"github.com/k3a/html2text"
 )
@@ -29,6 +30,7 @@ type Resp struct {
 func main() {
 
 	r := gin.New()
+	r.Use(gzip.Gzip(gzip.DefaultCompression))
 
 	r.POST("/fetch", func(c *gin.Context) {
 		req := FetchReq{}

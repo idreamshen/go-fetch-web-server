@@ -3,6 +3,7 @@ module github.com/idreamshen/go-fetch-web-server
 go 1.22.4
 
 require (
+	github.com/gin-contrib/gzip v1.0.1
 	github.com/gin-gonic/gin v1.10.0
 	github.com/k3a/html2text v1.2.1
 )
